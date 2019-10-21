@@ -7,5 +7,5 @@ spec:
     spec:
       containers:
       - name: ks-guestbook-demo
-        image: mizzy/ks-guestbook-demo:0.3
-        args: ["0.3"]
+        image: mizzy/ks-guestbook-demo:0.4
+        args: ["0.4"]
