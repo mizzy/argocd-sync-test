@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-
+spec:
+  template:
+    spec:
+      containers:
+      - name: ks-guestbook-demo
+        image: mizzy/ks-guestbook-demo:0.3
+        args: ["0.3"]
