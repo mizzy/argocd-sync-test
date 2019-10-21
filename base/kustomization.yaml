@@ -2,3 +2,11 @@ namePrefix: kustomize-
 
 resources:
 - job.yaml
+
+patchesJson6902:
+- path: patches/job-generate-name.yaml
+  target:
+    group: batch
+    version: v1
+    kind: Job
+    name: job-
