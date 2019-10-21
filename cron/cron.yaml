@@ -3,18 +3,12 @@ kind: CronJob
 metadata:
   name: cron-job
 spec:
-  # UTCで指定
   schedule: '* * * * *'
-  successfulJobsHistoryLimit: 7
-  failedJobsHistoryLimit: 7
+  successfulJobsHistoryLimit: 3
   jobTemplate:
     spec:
       template:
-        metadata:
-          name: whalesay
         spec:
           containers:
             - name: whlaesay
-              image: mizzy/whalesay:v0.0.2
-          restartPolicy: Never
-      backoffLimit: 0
+              image: mizzy/whalesay:v0.0.1
