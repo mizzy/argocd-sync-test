@@ -3,6 +3,5 @@ kind: Kustomization
 bases:
 - ../base
 images:
-- name: docker/whalesay
-  newName: mizzy/whalesay
-  newTag: v0.0.3
+- name: mizzy/ks-guestbook-demo
+  newTag: "0.2"
