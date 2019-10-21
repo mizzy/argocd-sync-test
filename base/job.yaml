@@ -9,7 +9,5 @@ spec:
       containers:
       - name: whalesay
         image: docker/whalesay:latest
-        command: [cowsay]
-        args: ["Hello World"]
       restartPolicy: Never
   backoffLimit: 4
