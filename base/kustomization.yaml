@@ -1,6 +1,7 @@
 namePrefix: kustomize-
 
 resources:
+- deployment.yaml
 - job.yaml
 
 patchesJson6902:
