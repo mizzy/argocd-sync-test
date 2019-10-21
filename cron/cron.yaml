@@ -2,8 +2,6 @@ apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
   name: cron-job
-  annotations:
-    argocd.argoproj.io/hook: Sync
 spec:
   # UTCで指定
   schedule: '* * * * *'
