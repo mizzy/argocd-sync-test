@@ -15,6 +15,6 @@ spec:
         spec:
           containers:
             - name: whlaesay
-              image: mizzy/whalesay:v0.0.1
+              image: mizzy/whalesay:v0.0.2
           restartPolicy: Never
       backoffLimit: 0
