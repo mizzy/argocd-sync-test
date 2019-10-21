@@ -9,7 +9,9 @@ spec:
   template:
     spec:
       containers:
-      - name: whalesay
-        image: docker/whalesay:latest
+      - name: ks-guestbook-demo
+        image: mizzy/ks-guestbook-demo:0.1
+        command: ["echo"]
+        args: ["0.1"]
       restartPolicy: Never
   backoffLimit: 4
