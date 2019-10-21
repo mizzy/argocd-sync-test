@@ -1,0 +1,20 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: cron-job
+  annotations:
+    argocd.argoproj.io/hook: Sync
+spec:
+  # UTCで指定
+  schedule: '* * * * *'
+  successfulJobsHistoryLimit: 7
+  failedJobsHistoryLimit: 7
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: whlaesay
+              image: mizzy/whalesay:v0.0.1
+          restartPolicy: Never
+      backoffLimit: 0
